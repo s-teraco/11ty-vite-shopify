@@ -12,7 +12,6 @@ console.log(TYPE);
 console.log(process.env.OUTPUT_DIR);
 
 
-
 export default defineConfig(({ command, mode }) => {
   return{
     root: process.env.OUTPUT_DIR,
