@@ -1,29 +1,37 @@
+const path = require('path');
+const dartSass = require('eleventy-plugin-dart-sass');
+
 require('dotenv').config({ path: `.env/.env.${process.env.NODE_ENV}` })
+
 
 
 module.exports = function (eleventyConfig) {
 
-  if(process.env.NODE_ENV !== 'production'){
-    // 画像通常コピー
-    eleventyConfig.addPassthroughCopy({"src/img": `${process.env.ASSETS_DIR}/img`});
+    // img copy
+    eleventyConfig.addPassthroughCopy({"src/img": `/${process.env.ASSETS_DIR}`});
+    // js copy
+    eleventyConfig.addPassthroughCopy({"src/js/app.js": `${process.env.ASSETS_DIR}/app.js`});
 
-    eleventyConfig.addPassthroughCopy({"src/js/app.js": `${process.env.ASSETS_DIR}/js/app.js`});
-    eleventyConfig.addPassthroughCopy({"src/scss/common.scss": `${process.env.ASSETS_DIR}/scss/common.scss`});
+    // dart sass
+    eleventyConfig.addPlugin(dartSass,{
+      sassLocation: path.normalize(
+        path.join(__dirname,  "src/scss/")
+      ),
+      outDir: `${process.env.OUTPUT_DIR}`,
+      outPath: `/${process.env.ASSETS_DIR}/`,
+      sassIndexFile: "common.scss",
+      outFileName: "common"
+    });
 
-  }else{
-      eleventyConfig.ignores.add("src/template/__tests__")
-      // オリジナル画像を圧縮してコピー / jpg pngの場合は webpを生成
-      CopyFilesRecursively('src/img',`${process.env.OUTPUT_DIR}/${process.env.DEST_DIR}/img`)
-  }
 
   return {
-    templateFormats: ['liquid', 'html'],
+    templateFormats: ['liquid', 'html','njk'],
     htmlTemplateEngine: 'liquid',
     dir: {
       input: 'src/liquid',
       output: `${process.env.OUTPUT_DIR}`,
-      // includes: "_includes",
-      // layouts: "_layouts",
+      includes: "_includes",
+      layouts: "_layouts",
       // data: "_data"
     }
   }

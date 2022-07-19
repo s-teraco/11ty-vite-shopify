@@ -6,7 +6,7 @@ require('dotenv').config({ path: `.env/.env.${TYPE}` })
 import path from 'path'
 import { defineConfig } from 'vite'
 
-import vitePluginHTML from "./plugins/vite-plugin-html";
+// import vitePluginHTML from "./plugins/vite-plugin-html";
 
 console.log(TYPE);
 console.log(process.env.OUTPUT_DIR);

@@ -1,0 +1,10 @@
+@use "sass:math";
+// @use "../../global" as *;
+@use "../settings/layout" as *;
+//============================================
+//  size
+//============================================
+
+@function vw($size,$baseWidth: $sp-comp-width){
+  @return calc($size / $baseWidth * 100) * 1vw;
+}
