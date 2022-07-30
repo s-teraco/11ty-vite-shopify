@@ -5,6 +5,29 @@
 //  size
 //============================================
 
+// px to rem
+// -----------------------------------------
+@function rem($size,$rootSize: 16){
+  @return calc($size / $rootSize * 100) * 1rem;
+}
+
+
+// px to vw
+// -----------------------------------------
 @function vw($size,$baseWidth: $sp-comp-width){
   @return calc($size / $baseWidth * 100) * 1vw;
+}
+
+
+// px to em
+// -----------------------------------------
+@function em($size, $parentSize: 16){
+  @return calc($size / $parentSize) * 1em;
+}
+
+
+// percent
+// -----------------------------------------
+@function per($value, $base: $sp-comp-width) {
+  @return percentage(math.div($value, $base));
 }

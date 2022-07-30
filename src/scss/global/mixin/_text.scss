@@ -1,0 +1,23 @@
+@use "sass:math";
+// @use "../../global" as *;
+@use "../settings/layout" as *;
+//============================================
+//  text
+//============================================
+
+// line-height
+@mixin lh($fontSize, $lineSize){
+  line-height: math.div($lineSize, $fontSize);
+}
+
+// letterspacing
+// ------------------------------------------
+@mixin ls($num) {
+  letter-spacing: math.div($num + 'em',1000);
+}
+
+// bold
+// ------------------------------------------
+@mixin bold(){
+  font-weight: bold;
+}

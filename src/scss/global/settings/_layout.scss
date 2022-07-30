@@ -4,6 +4,58 @@
 
 
 // -----------------------------------------
-// カンプのサイズ
+// カンプのサイズ (px)
 // -----------------------------------------
 $sp-comp-width : 375;
+$tab-comp-width: 768;
+$pc-comp-width: 1440;
+
+
+// -----------------------------------------
+// Break Point
+// -----------------------------------------
+$breakPointList: 320px, 576px, 768px, 980px, 1080px, 1280px, 1550px;
+
+$mq :(
+  "xxs": "screen and (min-width: #{nth($breakPointList, 1)})",
+  "xs": "screen and (min-width: #{nth($breakPointList, 2)})",
+  "sm": "screen and (min-width: #{nth($breakPointList, 3)})",
+  "md": "screen and (min-width: #{nth($breakPointList, 4)})",
+  "lg": "screen and (min-width: #{nth($breakPointList, 5)})",
+  "xl": "screen and (min-width: #{nth($breakPointList, 6)})",
+  "xxl": "screen and (min-width: #{nth($breakPointList, 7)})",
+) !default;
+
+$mq-down :(
+  "xxs": "screen and (max-width: #{nth($breakPointList, 1) - 1})",
+  "xs": "screen and (max-width: #{nth($breakPointList, 2) - 1})",
+  "sm": "screen and (max-width: #{nth($breakPointList, 3) - 1})",
+  "md": "screen and (max-width: #{nth($breakPointList, 4) - 1})",
+  "lg": "screen and (max-width: #{nth($breakPointList, 5) - 1})",
+  "xl": "screen and (max-width: #{nth($breakPointList, 6) - 1})",
+  "xxl": "screen and (max-width: #{nth($breakPointList, 7) - 1})",
+) !default;
+
+// // ブレークポイント
+// $breakpoints: (
+//   xxs: 0,
+//   xs: 360px,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1500px,
+// ) !default;
+
+
+// $breakpoints-down: (
+//   'se': 'screen and (max-width: 320px)',
+//   'sp360': 'screen and (max-width: 360px)',
+//   'sp': 'screen and (max-width: 600px)',
+//   'tab': 'screen and (max-width: 768px)',
+//   'tab-port': 'screen and (max-width: 768px) and (orientation:portrait)',
+//   'tab-land': 'screen and (max-width: 768px) and (orientation:landscape)',
+//   'pc': 'screen and (max-width: 1080px)',
+//   'pc-tab': 'screen and (max-width: 1280px) and (min-width: 769px)',
+//   'lpc': 'screen and (max-width: 1440px)',
+// ) !default;

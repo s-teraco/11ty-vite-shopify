@@ -1,0 +1,12 @@
+@use "sass:math";
+@use "sass:map";
+@use "../settings" as *;
+
+
+//  IE11
+//--------------------------------------------
+@mixin ie11() {
+  @media all and (-ms-high-contrast: none) {
+    @content;
+  }
+}

@@ -1,0 +1,29 @@
+@use "sass:math";
+@use "sass:map";
+@use "../settings" as *;
+//============================================
+//  media Query
+//============================================
+
+//  Media Queries
+//--------------------------------------------
+@mixin mq($breakpoint: "md", $type: min) {
+  @if ($type == max) {
+    @media #{map-get($mq-down, $breakpoint)} {
+      @content;
+    }
+  } @else if($type == min) {
+    @media #{map-get($mq, $breakpoint)} {
+      @content;
+    }
+  }
+}
+
+
+// hover
+// ------------------------------------------
+@mixin hov {
+  @media (hover: hover) {
+    @content;
+  }
+}
