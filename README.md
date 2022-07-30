@@ -7,8 +7,8 @@
 - Shopifyテーマのカスタマイズ、構築
 
 ## 必要な環境
-- Node v16+(https://nodejs.org/ja/)
-- Shopify CLI v2.20.0+(https://shopify.dev/themes/tools/cli/installation)
+- [Node v16+](https://nodejs.org/ja/)
+- [Shopify CLI v2.20.0+](https://shopify.dev/themes/tools/cli/installation)
 
 ## 使い方
 このリポジトリをクローンして、必要なパッケージをインストールしてください。
@@ -57,6 +57,6 @@ npm run deploy
 npm run opendoc
 ```
 下記、３サイトが立ち上がります。
-📖 [Liquid reference](https://shopify.dev/api/liquid)
-📖 [Shopify Cheat Sheet](https://www.shopify.com/partners/shopify-cheat-sheet)
+📖 [Liquid reference](https://shopify.dev/api/liquid). 
+📖 [Shopify Cheat Sheet](https://www.shopify.com/partners/shopify-cheat-sheet). 
 📖 [Shopify Liquid Code examples](https://shopify.github.io/liquid-code-examples/)
