@@ -57,8 +57,6 @@ npm run deploy
 npm run opendoc
 ```
 下記、３サイトが立ち上がります。
-📖 [Liquid reference](https://shopify.dev/api/liquid)
-
-📖 [Shopify Cheat Sheet](https://www.shopify.com/partners/shopify-cheat-sheet)
-
-📖 [Shopify Liquid Code examples](https://shopify.github.io/liquid-code-examples/)
+- 📖 [Liquid reference](https://shopify.dev/api/liquid)
+- 📖 [Shopify Cheat Sheet](https://www.shopify.com/partners/shopify-cheat-sheet)
+- 📖 [Shopify Liquid Code examples](https://shopify.github.io/liquid-code-examples/)
