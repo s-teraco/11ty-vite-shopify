@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/js/app.js"],
+  "sourcesContent": ["function init() {\n  const successNode = document.createElement('p')\n  document.body.appendChild(successNode)\n  successNode.innerText = 'hello from vite!!'\n}\ninit()\n"],
+  "mappings": ";;AAAA,WAAS,OAAO;AACd,UAAM,cAAc,SAAS,cAAc,GAAG;AAC9C,aAAS,KAAK,YAAY,WAAW;AACrC,gBAAY,YAAY;AAAA,EAC1B;AACA,OAAK;",
+  "names": []
+}

@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"sourceRoot": "http://localhost:8080",
+	"sources": [
+		"sass/file:///Users/saorin/Desktop/work/dev/11ty-vite-shopify/src/scss/foundation/_reset.scss"
+	],
+	"names": [],
+	"mappings": "AAGA,6DACE,UACA,eAIF,qBAGE,sBAIF,MACE,gBAIF,IACE,eACA,sBAIF,MACE",
+	"file": "common.css",
+	"sourcesContent": [
+		"/*** The new CSS Reset - version 1.0.0 (last updated 8.7.2021) ***/\n\n/* Remove all the styles of the \"User-Agent-Stylesheet\", except for the 'display' property */\n*:where(:not(iframe, canvas, img, svg, video,td):not(svg *)) {\n  all: unset;\n  display: revert;\n}\n\n/* Preferred box-sizing value */\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n\n/* Remove list styles (bullets/numbers) */\nol, ul {\n  list-style: none;\n}\n\n/* For images to not be able to exceed their container */\nimg {\n  max-width: 100%;\n  vertical-align: bottom;\n}\n\n/* removes spacing between cells in tables */\ntable {\n  border-collapse: collapse;\n}\n"
+	]
+}
