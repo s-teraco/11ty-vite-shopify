@@ -10,6 +10,41 @@
 - [Node v16+](https://nodejs.org/ja/)
 - [Shopify CLI v2.20.0+](https://shopify.dev/themes/tools/cli/installation)
 
+## フォルダ構成
+```
+[root]
+├ .env
+├ .vscode
+│
+├ src
+│ ├ js
+│ │ └ lib
+│ ├ liquid
+│ ├ liquid
+│ └ scss
+│
+├ _site
+│
+├ shopify
+│ ├ assets
+│ ├ config
+│ ├ layout
+│ ├ locales
+│ ├ sections
+│ ├ snipetts
+│ └ templates
+│
+│
+├ .eleventy.js
+├ .browserlistrc
+├ package-lock.json
+├ package.json
+└ vite.config.js
+
+```
+srcフォルダ内で開発します。
+
+
 ## 使い方
 このリポジトリをクローンして、必要なパッケージをインストールしてください。
 ```
