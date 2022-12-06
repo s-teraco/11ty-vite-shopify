@@ -1,0 +1,18 @@
+@use "../../global/" as *;
+
+.sp-db {
+  @include mq() {
+    display: none !important;
+  }
+}
+.sp-db._concept {
+  @include mq(sm) {
+    display: none !important;
+  }
+}
+.pc-db {
+  display: none;
+  @include mq() {
+    display: block;
+  }
+}
